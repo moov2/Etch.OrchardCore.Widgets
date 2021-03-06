@@ -44,6 +44,10 @@
     {% assign cssClasses = cssClasses | append: " gutter--" | append: gutterClass %}
 {% endif %}
 
+{% if Model.ContentItem.Content.Hero.LazyLoad.Value %}
+     {% assign loading = "lazy" %}
+{% endif %}
+
 <section {% if id != nil %} id="{{ id }}" {% endif %} class="{{ cssClasses }}">
     <div class="hero__body {{ constrainClasses }}">
         {{ Model.Content.Content | shape_render }}
@@ -53,7 +57,7 @@
         <div class="hero__media">
             <div class="embed embed--ratio-16-9">
 				<div class="embed__source">
-					<iframe src="{{ Model.ContentItem.Content.Hero.BackgroundEmbed.Text }}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<iframe src="{{ Model.ContentItem.Content.Hero.BackgroundEmbed.Text }}" loading="{{ loading | default: "eager" }}" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 				</div>
             </div>
         </div>
