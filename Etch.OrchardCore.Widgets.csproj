@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.12.0-rc2</Version>
@@ -16,11 +16,11 @@
 
   <ItemGroup>
     <PackageReference Include="Etch.OrchardCore.Fields" Version="0.11.3-rc2" />
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-rc2-13450" />
-    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0-rc2-13450" />
-    <PackageReference Include="OrchardCore.Flows" Version="1.0.0-rc2-13450" />
-    <PackageReference Include="OrchardCore.Lists" Version="1.0.0-rc2-13450" />
-    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-rc2-13450" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-rc2-16002" />
+    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0-rc2-16002" />
+    <PackageReference Include="OrchardCore.Flows" Version="1.0.0-rc2-16002" />
+    <PackageReference Include="OrchardCore.Lists" Version="1.0.0-rc2-16002" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-rc2-16002" />
   </ItemGroup>
 
   <ItemGroup>

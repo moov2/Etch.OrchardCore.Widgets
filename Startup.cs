@@ -11,17 +11,17 @@ namespace Etch.OrchardCore.Widgets
 {
     public class Startup : StartupBase
     {
-        static Startup()
-        {
-            TemplateContext.GlobalMemberAccessStrategy.Register<HtmlAttributesPart>();
-        }
-
         public override void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             
             services.AddContentPart<HtmlAttributesPart>()
                 .UseDisplayDriver<HtmlAttributesPartDisplay>();
+
+            services.Configure<TemplateOptions>(o =>
+            {
+                o.MemberAccessStrategy.Register<HtmlAttributesPart>();
+            });
 
             services.AddScoped<IDataMigration, Migrations>();
         }
